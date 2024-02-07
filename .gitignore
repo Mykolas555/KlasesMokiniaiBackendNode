@@ -1,0 +1,9 @@
+node_modules
+
+case '/':
+            const cardsHtml = data.moksleiviai.map(el=>replaceTemplate(card, el)).join('')
+           
+            const output = main.replace('{%STUDENT_CARDS%}', cardsHtml)
+            res.writeHead(200,{'Content-Type' : 'text/html'})
+            res.end(output)
+            break
